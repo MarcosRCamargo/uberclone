@@ -36,7 +36,7 @@ const Onboarding = () => {
           >
             <View className="w-[200px] h-[200px] rounded-full overflow-hidden">
               <Image
-                source={{ uri: item.image }}
+                source={item.image}
                 className="w-full h-full"
                 resizeMode="contain"
               />
