@@ -29,8 +29,11 @@ const Onboarding = () => {
         }
         onIndexChanged={(index) => setActiveIndex(index)}
       >
-        {onboarding.map((item) => (
-          <View className="flex flex-col items-center justify-center">
+        {onboarding.map((item, index) => (
+          <View
+            key={item.id || index} // Usando item.id como key ou, se não houver, o índice.
+            className="flex flex-col items-center justify-center"
+          >
             <View className="w-[200px] h-[200px] rounded-full overflow-hidden">
               <Image
                 source={{ uri: item.image }}
